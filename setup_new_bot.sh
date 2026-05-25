@@ -14,7 +14,7 @@ BOT_RELEASE_NAME="${BOT_RELEASE_NAME:-${BOT_APP_NAME}}"
 read -p "Bot title (e.g. My Task Bot): " BOT_NAME_TITLE
 
 # Convert to camel case
-BOT_APP_NAME_CAMEL=$(echo "$BOT_APP_NAME" | sed 's/_\([a-z]\)/\U\1/g' | sed 's/^\([a-z]\)/\U\1/')
+BOT_APP_NAME_CAMEL=$(echo "$BOT_APP_NAME" | perl -pe 's/(?:^|_)(.)/uc($1)/ge')
 
 echo ""
 echo "Creating bot: $BOT_NAME_TITLE"
