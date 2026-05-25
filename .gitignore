@@ -1,0 +1,20 @@
+# Dependencies
+/_build/
+/deps/
+/tmp/
+
+# Elixir
+*.beam
+erl_crash.dump
+.DS_Store
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Environment
+.env.local
+.env.*.local
