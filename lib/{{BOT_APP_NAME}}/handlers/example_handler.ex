@@ -1,11 +1,11 @@
-defmodule {{BOT_APP_NAME_CAMEL}}.Handlers.ExampleHandler do
+defmodule BotArmyWorkContext.Handlers.ExampleHandler do
   @moduledoc """
   Example request/reply handler for {{BOT_NAME}}.
 
   Listens to: example.action
   Replies with: success or error
 
-  To enable: add {{BOT_APP_NAME_CAMEL}}.Handlers.ExampleHandler to Application.ex children
+  To enable: add BotArmyWorkContext.Handlers.ExampleHandler to Application.ex children
   """
 
   use GenServer

@@ -1,16 +1,16 @@
-defmodule {{BOT_APP_NAME_CAMEL}}.MixProject do
+defmodule BotArmyWorkContext.MixProject do
   use Mix.Project
 
   def project do
     [
-      app: :{{BOT_APP_NAME}},
+      app: :bot_army_work_context,
       version: "0.1.0",
       elixir: "~> 1.14",
       start_permanent: Mix.env() == :prod,
       deps: deps(),
       releases: [
-        {{BOT_RELEASE_NAME}}: [
-          applications: [{{BOT_APP_NAME}}: :permanent]
+        work_context_bot: [
+          applications: [bot_army_work_context: :permanent]
         ]
       ]
     ]
@@ -19,7 +19,7 @@ defmodule {{BOT_APP_NAME_CAMEL}}.MixProject do
   def application do
     [
       extra_applications: [:logger],
-      mod: {{{BOT_APP_NAME_CAMEL}}.Application, []}
+      mod: {BotArmyWorkContext.Application, []}
     ]
   end
 

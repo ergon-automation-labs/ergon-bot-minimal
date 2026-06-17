@@ -1,4 +1,4 @@
-defmodule {{BOT_APP_NAME_CAMEL}}.HealthCheck do
+defmodule BotArmyWorkContext.HealthCheck do
   @moduledoc """
   Simple HTTP health check endpoint for Kubernetes/Docker.
   """

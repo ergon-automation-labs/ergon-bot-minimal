@@ -1,6 +1,6 @@
-defmodule {{BOT_APP_NAME_CAMEL}}.Application do
+defmodule BotArmyWorkContext.Application do
   @moduledoc """
-  {{BOT_NAME_TITLE}} application supervisor.
+  Work Context Bot application supervisor.
 
   Minimal Bot Army bot:
   - NATS connection managed by bot_army_runtime automatically
@@ -15,13 +15,13 @@ defmodule {{BOT_APP_NAME_CAMEL}}.Application do
   def start(_type, _args) do
     children = [
       # HTTP health check server
-      {Plug.Cowboy, scheme: :http, plug: {{BOT_APP_NAME_CAMEL}}.HealthCheck, options: [port: 8888]},
+      {Plug.Cowboy, scheme: :http, plug: BotArmyWorkContext.HealthCheck, options: [port: 8888]},
 
       # Add your bot-specific workers/handlers here:
-      # Example: {{BOT_APP_NAME_CAMEL}}.ExampleHandler
+      # Example: BotArmyWorkContext.ExampleHandler
     ]
 
-    opts = [strategy: :one_for_one, name: {{BOT_APP_NAME_CAMEL}}.Supervisor]
+    opts = [strategy: :one_for_one, name: BotArmyWorkContext.Supervisor]
     Supervisor.start_link(children, opts)
   end
 end
